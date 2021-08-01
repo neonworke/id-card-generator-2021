@@ -1,0 +1,7 @@
+.id-card-image-background{
+    background: linear-gradient(180deg, #4338ca 0%, rgba(50, 3, 237, 0.37) 100%);
+}
+
+#generated-id-card{
+    display: none;
+}
