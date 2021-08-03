@@ -52,6 +52,10 @@
                   class="border"
                 />
               </div>
+              <div class="flex flex-col w-60 mt-4">
+                <label for="image-upload" class="font-semibold">Upload Student Image</label>
+                <input type="file" id="image-upload" class="border" onchange="previewImage(event)"/>
+              </div>
               <button class="bg-indigo-700 text-white mt-4 px-3 py-1 rounded" onclick="generateIdCard(event)">Generate Card</button>
             </form>
           </div>
@@ -61,9 +65,10 @@
             <div class="text-indigo-600 text-xl">Generated ID Card</div>
             <div id="student-id-card" class="border w-80 border-black h-48 rounded flex">
               <div id="student-image-container" class="w-4/12 id-card-image-background flex items-center justify-center">
-                <span class="material-icons text-white text-8xl">
+                <!-- <span class="material-icons text-white text-8xl">
                   account_circle
-                  </span>
+                  </span> -->
+                  <img  id="student-image" src="#" alt="student ptofile image" class="rounded w-4"/>
               </div>
               <div id="student-details-container" class="w-8/12 pt-4 pl-3">
                 <div>
