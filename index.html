@@ -12,49 +12,63 @@
     <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
       rel="stylesheet">
+      <link rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <header>
       <div class="bg-indigo-700 text-white py-2 text-center font-bold">
-        New ID Generator
+        ID Card Generator
       </div>
     </header>
     <section>
-      <div id="body-container" class="lg:flex">
-        <div id="user-details" class="lg:w-2/4">
+      <div id="body-container" class="lg:flex items-center">
+        <div id="user-details" class="lg:w-2/4 ml-48 mt-16">
           <div id="form-elements-container" class="pt-10 lg:pl-16 pl-6">
-            <div class="text-indigo-600 text-xl">Enter Student Details</div>
+            <div class="text-indigo-600 text-xl font-semibold">Enter Student Details</div>
             <form>
               <div class="flex flex-col w-60 mt-4">
-                <label for="student-name" class="font-semibold">Enter Student Name</label>
+                <label for="student-name" class="font-semibold">Enter Name:</label>
+                <div class="input-icons">
+                <i class="fa fa-user icon"></i>
                 <input
                   type="text"
                   id="student-name"
-                  placeholder="Enter Student Name here"
+                  placeholder="Enter Student Name"
                   class="border"
                 />
               </div>
-              <div class="flex flex-col w-60 mt-4">
-                <label for="college-name" class="font-semibold">Enter College Name</label>
-                <input
+              </div>
+              <div class="flex flex-col w-60 mt-2">
+                <label for="college-name" class="font-semibold">Enter College Name:</label>
+                <div class="input-icons">
+                  <i class="fa fa-university icon"></i>
+                  <input
                   type="text"
                   id="college-name"
-                  placeholder="Enter College Name here"
+                  placeholder="Enter College Name"
                   class="border"
                 />
+                </div> 
               </div>
-              <div class="flex flex-col w-60 mt-4">
-                <label for="location-name" class="font-semibold">Enter Location Name</label>
-                <input
+              <div class="flex flex-col w-60 mt-2">
+                <label for="location-name" class="font-semibold">Enter Location:</label>
+                <div class="input-icons">
+                  <i class="fa fa-address-book icon"></i>
+                  <input
                   type="text"
                   id="location-name"
-                  placeholder="Enter Location Name here"
+                  placeholder="Enter Location Name"
                   class="border"
                 />
+                </div>
               </div>
-              <div class="flex flex-col w-60 mt-4">
-                <label for="image-upload" class="font-semibold">Upload Student Image</label>
-                <input type="file" id="image-upload" class="border" onchange="previewImage(event)"/>
+              <div class="flex flex-col w-60 mt-2">
+                <label for="image-upload" class="font-semibold">Upload Student Picture</label>
+                <input type="file" accept="image/*" id="image-upload" name="image-upload" class="border" onchange="previewImage(event)"/>
+              </div>
+              <div class="preview">
+                <img id="file-ip-1-preview">
               </div>
               <button class="bg-indigo-700 text-white mt-4 px-3 py-1 rounded" onclick="generateIdCard(event)">Generate Card</button>
             </form>
@@ -62,13 +76,13 @@
         </div>
         <div id="generated-id-card" class="lg:w-2/4">
           <div id="form-elements-container" class="pt-10 lg:pl-16 pl-6">
-            <div class="text-indigo-600 text-xl">Generated ID Card</div>
-            <div id="student-id-card" class="border w-80 border-black h-48 rounded flex">
-              <div id="student-image-container" class="w-4/12 id-card-image-background flex items-center justify-center">
+            <div class="font-bold text-lg text-center mr-44 pb-5">Generated ID Card</div>
+            <div id="student-id-card" class="border w-80 border-none shadow-lg h-48 flex rounded-lg">
+              <div id="student-image-container" class="w-4/12 id-card-image-background flex items-center justify-center rounded-lg">
                 <!-- <span class="material-icons text-white text-8xl">
                   account_circle
                   </span> -->
-                  <img  id="student-image" src="#" alt="student ptofile image" class="rounded w-4"/>
+                  <img  id="student-image" src="#" alt="student profile image" class="rounded-3xl w-24 h-24"/>
               </div>
               <div id="student-details-container" class="w-8/12 pt-4 pl-3">
                 <div>

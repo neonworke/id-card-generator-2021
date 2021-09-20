@@ -1,13 +1,46 @@
 .id-card-image-background{
-    background: linear-gradient(180deg, #4338ca 0%, rgba(50, 3, 237, 0.37) 100%);
+    background: linear-gradient(360deg, #4338ca 0%, rgba(50, 3, 237, 0.37) 100%);
 }
 
 #generated-id-card{
     display: none;
+    box-shadow: 10px;
 }
 
-#student-image{
+/* #student-image{
     border-radius: 50%;
     width: 100px;
     height: 100px;
+} */
+
+.input-icons i {
+    position: absolute;
 }
+  
+.input-icons {
+    width: 100%;
+    margin-bottom: 20px;
+}
+  
+.icon {
+    padding: 5px;
+    min-width: 50px;
+}
+
+input[type="text"]::placeholder {  
+                  
+    /* Firefox, Chrome, Opera */ 
+    padding-left: 25px; 
+} 
+
+input {
+    border-radius: 5px 5px;
+    background-color:lightcyan;
+}
+
+.preview { 
+    width: 100px;
+    min-height: 50px;
+    margin-top: 10px;
+}
+
